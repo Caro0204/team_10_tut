@@ -20,9 +20,7 @@
 </header>
 <style>
 /* logo */
-.logo{
-    width: 50%;
-}
+
 
 /* burger menu */
 header {
@@ -50,7 +48,29 @@ nav {
   display: none;
 }
 
+.container:hover .logo {
+  transform: scale(1.1);
+}
 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  .logo {
+    margin-right: 1rem; /* Adjust margin for spacing between logo and menu items */
+margin-left: 50px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 5rem; /* Adjust the gap between menu items */
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 </style>
 <script>
     const burger = document.querySelector(".burger");
