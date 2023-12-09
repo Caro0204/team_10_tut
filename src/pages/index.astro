@@ -13,7 +13,33 @@ import MainLayout from "../components//MainLayout.astro";
 	</head>
 	<body>
 		<MainLayout>
-
+<h1>THANK YOU TATTOO</h1>
+<div class="grid1_1">
+	<div >
+		<h2>BOOK YOUR APPOINTMENT NOW</h2>
+	</div>
+	<div>
+<img class="front_img" src="/front.webp" alt="billede af fronten på thank you tattoo">
+</div>
+</div>
+<h2>ARTISTS</h2>
 		</MainLayout>
 	</body>
 </html>
+<style>
+	
+	/* BILLEDER */
+	.front_img{
+		width: 100%;
+		margin: 0;
+	}
+	
+	 @media screen and (min-width: 620px){
+		.grid1_1{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	 }
+
+</style>

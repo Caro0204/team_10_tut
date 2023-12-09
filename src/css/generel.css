@@ -1,0 +1,22 @@
+/******** FONTS *********/
+p {
+  font-family: "Inconsolata", monospace;
+}
+a {
+  font-family: "Inconsolata", monospace;
+  text-decoration: none;
+  color: #c5c5c5;
+  font-size: 1.2rem;
+}
+h2 {
+  font-family: "Inconsolata", monospace;
+  color: #c5c5c5;
+}
+
+/********** IMG **********/
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,15 +1,20 @@
 ---
-
+import "../css/generel.css";
 ---
 <header>
-<div class="container">
-  <a class="logo" href="../pages/index.astro"></a><img src="../logo_tut.svg" alt="logo" />
+<div class="logo">
+    <div>
+  <a href="/"><img src="/logo_tut.svg" alt="logo" /></a>
+  </div>
+  <div>
+  <p class="logo_test">EST 2014</p>
+  </div>
   </div>
 <nav>
   <ul class="menu">
     <li><a href="/">ARTISTS</a></li>
     <li><a href="/">CONTACT</a></li>
-    <li><a href="/"></a></li>
+    <li><a class="booknow" href="/">BOOK NOW</a></li>
   </ul>
    <div class="burger">
                 <div class="line"></div>
@@ -20,7 +25,27 @@
 </header>
 <style>
 /* logo */
+.logo{
+    width: 22%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+.logo_test{
+    color: #C5C5C5;
+    font-family: 'Inconsolata', monospace;
+}
+/* Knap */
+.booknow{
+background-color: #C5C5C5;
+color: #101010;
+padding: 7px;
+padding-left: 9px;
+padding-right: 9px;
+font-size: 22px;
+
+}
 
 /* burger menu */
 header {
@@ -55,22 +80,76 @@ nav {
   nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 1rem; /* Add padding for better spacing */
-  }
-
-  .logo {
-    margin-right: 1rem; /* Adjust margin for spacing between logo and menu items */
-margin-left: 50px;
   }
 
   ul {
     list-style: none;
     display: flex;
-    gap: 5rem; /* Adjust the gap between menu items */
+    gap: 3rem; /* Adjust the gap between menu items */
     margin-left: 30px;
     margin-right: 30px;
   }
+
+
+  /* Media query for responsiveness */
+  @media screen and (max-width: 680px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+    width: 42%;
+      
+}
+    ul {
+      flex-direction: column;
+      gap: 0.5rem; /* Adjust the gap between menu items in mobile view */
+    }
+
+  /* menu */
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #c5c5c56e;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+    
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+    color: white;
+   
+  }
+}
 </style>
 <script>
     const burger = document.querySelector(".burger");
