@@ -12,9 +12,9 @@ import "../css/generel.css";
   </div>
 <nav>
   <ul class="menu">
-    <li><a href="/">ARTISTS</a></li>
-    <li><a href="/">CONTACT</a></li>
-    <li><a class="booknow" href="/">BOOK NOW</a></li>
+    <li><a class="strikethrough" id="artists" href="/artists/">ARTISTS</a></li>
+    <li><a class="strikethrough" id="contact" href="/contact/">CONTACT</a></li>
+    <li><a class="booknow border" id="booknow" href="/booknow/">BOOK NOW</a></li>
   </ul>
    <div class="burger">
                 <div class="line"></div>
@@ -24,6 +24,16 @@ import "../css/generel.css";
 </nav>
 </header>
 <style>
+/* Font */
+
+.active {
+  text-decoration: line-through;
+color: #ecc470;
+}
+.strikethrough:hover {
+  text-decoration: line-through;
+  color: #ecc470;
+}
 /* logo */
 .logo{
     width: 22%;
@@ -45,6 +55,12 @@ padding-left: 9px;
 padding-right: 9px;
 font-size: 22px;
 
+}
+.border:hover{
+background-color: #ecc470;
+}
+.fill{
+   background-color: #ecc470; 
 }
 
 /* burger menu */
@@ -131,7 +147,7 @@ nav {
 
   nav.active .menu {
     display: block;
-    background-color: #c5c5c56e;
+    background-color: #ecc570c3;
     position: absolute;
     top: 70px;
     left: 0;
@@ -168,5 +184,21 @@ links.forEach((link) => {
     nav.classList.remove("active");
   });
 });
+
+var currentPath = window.location.pathname;
+
+// Get the links by their IDs
+var page1Link = document.getElementById('artists');
+var page2Link = document.getElementById('contact');
+var page3Link = document.getElementById('booknow');
+
+// Check if the current path matches the link's href and add the class
+if (currentPath === '/artists/') {
+  page1Link.classList.add('active');
+} else if (currentPath === '/contact/') {
+  page2Link.classList.add('active');
+}else if (currentPath === '/booknow/') {
+  page3Link.classList.add('fill');
+}
 
 </script>
