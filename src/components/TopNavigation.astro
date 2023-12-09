@@ -1,0 +1,69 @@
+---
+
+---
+<header>
+<div class="container">
+  <img  class="logo" src="../logo_tut.svg" alt="logo" />
+  </div>
+<nav>
+  <ul class="menu">
+    <li><a href="/">ARTISTS</a></li>
+    <li><a href="/">CONTACT</a></li>
+    <li><a href="/"></a></li>
+  </ul>
+   <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+</nav>
+</header>
+<style>
+
+/* burger menu */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  align-items: center;
+  
+}
+.burger {
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.burger {
+  display: none;
+}
+
+
+</style>
+<script>
+    const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li a");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+</script>
