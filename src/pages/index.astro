@@ -24,7 +24,7 @@ import "../css/generel.css";
         <div>
           <h2>BOOK YOUR APPOINTMENT NOW</h2>
           <h3>
-            Visit us in the store and have a personal chat about your future
+            Visit us in the store and have a personal chat <br>about your future
             tattoo(s)
           </h3>
         </div>
@@ -47,6 +47,9 @@ import "../css/generel.css";
   .front_img {
     width: 100%;
     margin: 0;
+	transition: opacity 0.5s ease-in-out;
+	transform: translate(-50%, -50%);
+  opacity: 0;
   }
   h1 {
     font-family: "SignPainter HouseScript";
@@ -54,6 +57,7 @@ import "../css/generel.css";
 	font-size: 5rem;
 	margin: 0;
 	margin-bottom: 100px;
+	margin-left: 7px;
   }
 
   @media screen and (min-width: 620px) {
