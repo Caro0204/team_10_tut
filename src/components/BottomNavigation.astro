@@ -1,3 +1,126 @@
 ---
 import "../css/generel.css";
 ---
+
+<footer>
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3 class="overskrift">FAQ</h3>
+            <div class="faq">
+                <div class="faq-item">
+                    <h4 class="question">What payment methods do we offer?</h4>
+                    <p class="answer">We offer: VISA - Mastercard - MobilePay - Cash </p>
+                </div>
+                <!-- Add more FAQ items similarly -->
+                <div class="faq-item">
+                    <h4 class="question">How do I book an appointment?</h4>
+                    <p class="answer">You can book an appointment by visiting the store, by insta, by the site or by calling the number: <br><br> + 45 60 18 16 63</p>
+                </div>
+                 <div class="faq-item">
+                    <h4 class="question">How much does a tattoo cost?</h4>
+                    <p class="answer">Answer 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                 <div class="faq-item">
+                    <h4 class="question">Terms regarding advance payment & cancellation</h4>
+                    <p class="answer">Answer 4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                 <div class="faq-item">
+                    <h4 class="question">Preparation for tattoo session</h4>
+                    <p class="answer">Answer 5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                 <div class="faq-item linebottom">
+                    <h4 class="question">How do I take care of my new tattoo</h4>
+                    <p class="answer">Answer 6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="logo_bottom">
+             <a href="/"><img src="/logo_tut.svg" alt="logo" /></a>
+             </div>
+             <div>
+            <h3>Column 1</h3>
+            </div>
+            <div>
+            <a class="booknow border" id="booknow" href="/booknow/">BOOK NOW</a>
+            </div>
+            <!-- Your content for column 1 -->
+        </div>
+        <div class="footer-column">
+            <h3>Column 2</h3>
+            <!-- Your content for column 2 -->
+        </div>
+    </div>
+</footer>
+<style>
+
+/* Style FAQ items */
+.faq-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+}
+.linebottom{
+    border-bottom: 1px solid #ccc;
+}
+
+.answer {
+    display: none;
+}
+
+
+ @media screen and (min-width: 620px){
+    .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    
+    
+}
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+    margin: 20px;
+    
+}
+.overskrift{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+.booknow{
+background-color: #c5c5c5c0;
+color: #101010;
+padding: 7px;
+padding-left: 9px;
+padding-right: 9px;
+font-size: 22px;}
+
+/**** LOGO ****/
+.logo_bottom{
+    width: 45%;
+    opacity: 40%;
+    margin: 0 auto;
+}
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const answer = this.querySelector('.answer');
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+
+            // Hide other answers when one is clicked
+            faqItems.forEach(function(otherItem) {
+                if (otherItem !== item) {
+                    otherItem.querySelector('.answer').style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
