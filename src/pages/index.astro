@@ -6,43 +6,54 @@ import "../css/generel.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Forside</title>
-	</head>
-	<body>
-		<MainLayout>
-<h1>THANK YOU TATTOO</h1>
-<div class="grid1_1">
-	<div >
-		<h2>BOOK YOUR APPOINTMENT NOW</h2>
-		<h3>Visit us in the store and have a personal chat about your future tattoo(s)</h3>
-	</div>
-	<div>
-<img class="front_img" src="/front.webp" alt="billede af fronten på thank you tattoo">
-</div>
-</div>
-<h2>ARTISTS</h2>
-		</MainLayout>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript"
+      rel="stylesheet"
+    />
+    <title>Forside</title>
+  </head>
+  <body>
+    <MainLayout>
+      <h1>THANK YOU TATTOO</h1>
+      <div class="grid1_1">
+        <div>
+          <h2>BOOK YOUR APPOINTMENT NOW</h2>
+          <h3>
+            Visit us in the store and have a personal chat about your future
+            tattoo(s)
+          </h3>
+        </div>
+        <div>
+          <img
+            class="front_img"
+            src="/front.webp"
+            alt="billede af fronten på thank you tattoo"
+          />
+        </div>
+      </div>
+      <h2>ARTISTS</h2>
+    </MainLayout>
+  </body>
 </html>
 <style>
-	
-	/* BILLEDER */
-	.front_img{
-		width: 100%;
-		margin: 0;
-	}
-	
-	 @media screen and (min-width: 620px){
-		.grid1_1{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
+  /* BILLEDER */
+  .front_img {
+    width: 100%;
+    margin: 0;
+  }
+  h1 {
+    font-family: "SignPainter HouseScript";
+  }
 
-	 }
-
+  @media screen and (min-width: 620px) {
+    .grid1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 </style>
