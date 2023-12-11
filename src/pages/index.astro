@@ -30,7 +30,7 @@ import "../css/generel.css";
           </h3>
 		  <ButtonIndex id="booknow" ButtonTitle1="BOOK NOW" ButtonLink="/booknow/"/>
         </div>
-        <div>
+        <div class="order">
           <img
             class="front_img"
             src="/front.webp"
@@ -49,6 +49,12 @@ import "../css/generel.css";
   .front_img {
     width: 100%;
     margin: 0;
+  }
+   .grid1_1 {
+      display: grid;
+    }
+ .order{
+	order:-2;
   }
 
   /*** Text ***/
@@ -78,5 +84,8 @@ margin-left: 7px;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+	 .order{
+	order:1;
+  }
   }
 </style>
