@@ -24,6 +24,11 @@ p {
   color: #c5c5c5;
 }
 
+h2 {
+  font-size: 4.5rem;
+  color: #ffff;
+}
+
 /********** IMG **********/
 
 img {
