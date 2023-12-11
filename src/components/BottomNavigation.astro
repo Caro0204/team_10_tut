@@ -23,19 +23,31 @@ import Button from "../components/ButtonNav.astro";
                     <p class="answer">You can book an appointment by visiting the store, by insta, by the site or by calling the number: <br><br> + 45 60 18 16 63</p>
                 </div>
                  <div class="faq-item">
+                    <div class="q_arrow">
                     <h4 class="question">How much does a tattoo cost?</h4>
+                     <img class="arrow" src="/arrow.svg" alt="pil ned">
+                    </div>
                     <p class="answer">The price depends on the size. We have a starting fee of DKK 800. Contact us for more information.</p>
                 </div>
                  <div class="faq-item">
+                    <div class="q_arrow">
                     <h4 class="question">Terms regarding advance payment & cancellation</h4>
+                     <img class="arrow" src="/arrow.svg" alt="pil ned">
+                     </div>
                     <p class="answer">We charge a desosit of 25% of the booking value. The pre-paid deposit is not refounded in the event of cancellation if it happens 5 days before the appointment.</p>
                 </div>
                  <div class="faq-item">
+                    <div class="q_arrow">
                     <h4 class="question">Preparation for tattoo session</h4>
+                     <img class="arrow" src="/arrow.svg" alt="pil ned">
+                     </div>
                     <p class="answer">We encourage you to avoird alcohol the days before and after your session for the best healing process. In addition, get a good meal before you show up.</p>
                 </div>
                  <div class="faq-item linebottom">
+                    <div class="q_arrow">
                     <h4 class="question">How do I take care of my new tattoo?</h4>
+                     <img class="arrow" src="/arrow.svg" alt="pil ned">
+                     </div>
                     <p class="answer">You will receive an introduktion to how to treat your new tattoo after your session. <br><br> In case you have any questions, you can read more here: <a class="link_aftercare" href="https://mst.dk/borger/sundhed-og-kemi/personlig-pleje/think-before-you-ink/efter-tatovering" target="_blank">After care</a> </p>
                 </div>
             </div>
@@ -131,7 +143,8 @@ h4, .overskrift{
 }
 .q_arrow{
     display: flex;
-    gap: 35px;
+    justify-content: space-between;
+    margin-right: 15px;
 }
 
 /* pil */
@@ -139,6 +152,7 @@ h4, .overskrift{
 .arrow {
     transition: transform 0.3s ease-in-out;
     width: 6%;
+    align-items: end;
 }
 .open .arrow {
     transform: rotate(180deg);
