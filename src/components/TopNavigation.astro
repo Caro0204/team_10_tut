@@ -1,5 +1,7 @@
 ---
 import "../css/generel.css";
+import Button from "../components/ButtonNav.astro";
+
 ---
 <header>
 <div class="logo">
@@ -9,7 +11,8 @@ import "../css/generel.css";
   <ul class="menu">
     <li><a class="strikethrough" id="artists" href="/artists/">ARTISTS</a></li>
     <li><a class="strikethrough" id="contact" href="/contact/">CONTACT</a></li>
-    <li><a class="booknow border" id="booknow" href="/booknow/">BOOK NOW</a></li>
+    <li><Button class="border" id="booknow" ButtonTitle="BOOK NOW" ButtonLink="/booknow/"/></li>
+   
   </ul>
    <div class="burger">
                 <div class="line"></div>
@@ -50,11 +53,8 @@ padding-right: 9px;
 font-size: 22px;
 
 }
-.border:hover{
-background-color: #ecc470;
-}
 .fill{
-   background-color: #ecc470; 
+   background-color: #ecc470;
 }
 
 /* burger menu */

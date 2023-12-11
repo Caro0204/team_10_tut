@@ -1,5 +1,6 @@
 ---
 import "../css/generel.css";
+import Button from "../components/ButtonNav.astro";
 ---
 
 <footer>
@@ -41,7 +42,7 @@ import "../css/generel.css";
             <h3 class="center font" >THANK YOU TATTOO</h3>
             </div>
             <div class="center">
-            <a class="booknow border" id="booknow" href="/booknow/">BOOK NOW</a>
+                <Button class="booknow border" id="booknow" ButtonTitle="BOOK NOW" ButtonLink="/booknow/" />
             </div>
         </div>
         <div class="footer-column">
@@ -81,13 +82,7 @@ footer {
     margin: 0 auto;
      opacity: 40%;
 }
-.booknow{
-border: 1.5px solid#c5c5c57b;
-padding: 7px;
-padding-left: 9px;
-padding-right: 9px;
-font-size: 20px;
-}
+
 .font{
     font-family: "SignPainter HouseScript";
     margin: 0;
@@ -152,12 +147,7 @@ h4{
     font-size: 1.2rem;
     margin-left: 10px;
 }
-.booknow{
-border: 1.5px solid#c5c5c57b;
-padding: 7px;
-padding-left: 9px;
-padding-right: 9px;
-font-size: 22px;}
+
 
 /**** LOGO ****/
 .logo_bottom{
