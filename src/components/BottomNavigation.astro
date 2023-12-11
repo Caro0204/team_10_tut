@@ -9,11 +9,17 @@ import Button from "../components/ButtonNav.astro";
             <h3 class="overskrift">FAQ</h3>
             <div class="faq">
                 <div class="faq-item">
+                    <div class="q_arrow">
                     <h4 class="question">What payment methods do we offer?</h4>
+                    <img class="arrow" src="/arrow.svg" alt="pil ned">
+</div>
                     <p class="answer">We offer: VISA - Mastercard - MobilePay - Cash </p>
                 </div>
                 <div class="faq-item">
+                    <div class="q_arrow">
                     <h4 class="question">How do I book an appointment?</h4>
+                     <img class="arrow" src="/arrow.svg" alt="pil ned">
+            </div>
                     <p class="answer">You can book an appointment by visiting the store, by insta, by the site or by calling the number: <br><br> + 45 60 18 16 63</p>
                 </div>
                  <div class="faq-item">
@@ -123,6 +129,20 @@ h4, .overskrift{
     text-decoration: underline;
     color: #ECC470;
 }
+.q_arrow{
+    display: flex;
+    gap: 35px;
+}
+
+/* pil */
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+    width: 6%;
+}
+.open .arrow {
+    transform: rotate(180deg);
+}
 
  @media screen and (min-width: 800px){
     .footer-columns {
@@ -149,6 +169,7 @@ h4{
 }
 
 
+
 /**** LOGO ****/
 .logo_bottom{
     width: 45%;
@@ -162,11 +183,13 @@ h4{
     faqItems.forEach(function(item) {
         item.addEventListener('click', function() {
             const answer = this.querySelector('.answer');
+            item.classList.toggle("open");
             answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
 
             // Hide other answers when one is clicked
             faqItems.forEach(function(otherItem) {
                 if (otherItem !== item) {
+                    otherItem.classList.remove("open");
                     otherItem.querySelector('.answer').style.display = 'none';
                 }
             });
