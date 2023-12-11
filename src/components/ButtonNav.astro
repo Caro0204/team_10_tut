@@ -5,31 +5,31 @@ const { ButtonLink, ButtonTitle } = Astro.props;
 <a class="booknow border" href={ButtonLink}><button>{ButtonTitle}</button></a>
 
 <style>
-    button{
-        all: unset;
-    }
-    .booknow{
-        background-color: #ffff;
-        color: #101010;
-padding: 7px;
-padding-left: 9px;
-padding-right: 9px;
-font-size: 20px;
-  font-family: "Inconsolata", monospace;
-  margin-top: -10px;
-    }
-    .border:hover{
-background-color: #ecc470;
-}
-a:hover{
+  button {
+    all: unset;
+  }
+  .booknow {
+    background-color: #ffff;
     color: #101010;
-}
-
- @media screen and (min-width: 800px){
-    .booknow{
-padding: 7px;
-padding-left: 9px;
-padding-right: 9px;
-font-size: 22px;}
- }
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 20px;
+    font-family: "Inconsolata", monospace;
+    margin-top: -10px;
+  }
+  .border:hover {
+    background-color: #ecc470;
+  }
+  a:hover {
+    color: #101010;
+  }
+  @media screen and (min-width: 800px) {
+    .booknow {
+      padding: 7px;
+      padding-left: 9px;
+      padding-right: 9px;
+      font-size: 22px;
+    }
+  }
 </style>
