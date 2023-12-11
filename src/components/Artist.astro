@@ -1,0 +1,17 @@
+---
+const {data} =Astro.props;
+console.log(data);
+---
+<a href={`/name/${data.speaker}`}>
+<article>
+    <div class="imgfolder">
+    <img src={data.image} alt="placeholder">
+    </div>
+    <h2>{data.name}</h2>
+    <p>{data.title}</p>
+</article>
+</a>
+
+<style>
+
+</style>
