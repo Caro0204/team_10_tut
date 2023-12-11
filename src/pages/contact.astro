@@ -19,10 +19,15 @@ import "../css/generel.css";
     <MainLayout>
         <h2>CONTACT</h2>
         <img src="/udenfor.webp" alt="billede af butikken udefra">
+        <div class="box">
         <h2>FIND US</h2>
+        <div class="grid1_1">
         <div>
+            <div>
+                <a href=""></a>
+            </div>
         <ul>
-                <li>+4560181663</li>
+                <li class="farve">+4560181663</li>
                 <br><br>
                 <li class="grid1_3">
                     <div>
@@ -35,6 +40,17 @@ import "../css/generel.css";
                 <li>Oehlenschlægersgade 41 <br>
 1663 Copenhagen V</li>
         </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Mandag - fredag: <br> 12.00 - 18.00</li>
+                <br><br>
+                <li>Lørdag: <br>12.00 - 16.00</li>
+                <br><br>
+                <li>Søndag: <br>lukket</li>
+            </ul>
+        </div>
+        </div>
         </div>
 </MainLayout>
 	</body>
@@ -50,8 +66,36 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:10px;
-    width: 30%;
+    width: 45%;
     margin-top: -25px;
+}
+
+/****/
+.box{
+    margin: 70px;
+}
+.grid1_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+ul{
+    list-style: none;
+    margin-top: 82px;
+}
+li{
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.7rem;
+}
+li a{
+    color: #ffff;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.5rem;
+}
+.farve{
+    color: #ECC470;
 }
 .str{
     width: 90%;
