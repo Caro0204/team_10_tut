@@ -52,7 +52,7 @@ import Button from "../components/ButtonNav.astro";
                 </div>
             </div>
         </div>
-        <div class="footer-column">
+        <div class="footer-column ">
             <div class="logo_bottom">
              <a href="/"><img src="/logo_tut.svg" alt="logo" /></a>
              </div>
@@ -65,8 +65,16 @@ import Button from "../components/ButtonNav.astro";
         </div>
         <div class="footer-column">
             <ul>
-                <li>+4560181663 <br><a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">@thankyoutattoo</a></li>
+                <li>+4560181663</li>
                 <br><br>
+                <li class="grid1_3">
+                    <div>
+                <a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img src="/instasvg.svg" alt="insta svg"></a></div>
+                <div><a href="https://www.facebook.com/thankyoutattoo" target="_blank"><img src="/facebook.svg" alt="facebook icon"></a></div>
+                <div class="str"><img src="/tiktoksvg.svg" alt="tiktok svg"></div>
+            </li>
+            <br><br>
+                
                 <li>Oehlenschlægersgade 41 <br>
 1663 Copenhagen V</li>
  <br><br>
@@ -145,6 +153,17 @@ h4, .overskrift{
     display: flex;
     justify-content: space-between;
     margin-right: 15px;
+}
+/** icons **/
+.grid1_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:15px;
+    width: 40%;
+    margin-top: -20px;
+}
+.str{
+    width: 90%;
 }
 
 /* pil */
