@@ -27,9 +27,11 @@ console.log(myData);
 
 <MainLayout>
     <section>
+      <div class="flexartistheader">
+      <h1>{myData.name}</h1>
+      <button onclick="history.back()">Return to Artist Page</button>
+      </div>
         <article class="txt_grid">
-<button onclick="history.back()">Go Back</button>
-                <h2>{myData.name}</h2>
 	    <img src={myData.profile_img} alt="placeholder">
         <div class="text">
     <p>{myData.text}</p>
@@ -60,6 +62,33 @@ console.log(myData);
 
 img {
     filter: grayscale();
+      width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: none;
+  color: #ecc470;;
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.flexartistheader {
+  display: flex;
+  flex-direction: column;
+}
+.flexartistheader h1 {
+  display: flex;
+  justify-content: center;
+}
+.flexartistheader button {
+  display: flex;
+  align-self: flex-start;
+  height: 30px;
 }
 
       @media screen and (min-width: 620px) {
@@ -79,6 +108,9 @@ img {
         img {
 	filter: grayscale();
 	transition: filter 0.5s ease;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 img:hover {
 	filter: none;
