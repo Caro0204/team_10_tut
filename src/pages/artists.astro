@@ -5,6 +5,16 @@ import BottomNavigation from "../components/BottomNavigation.astro";
 import "../css/generel.css";
 import Artist from "../components/Artist.astro"
 
+const data = await fetch(
+  "https://pexwboaieovroxjkczsc.supabase.co/rest/v1/tutdata",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBleHdib2FpZW92cm94amtjenNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ1MDEwNzgsImV4cCI6MjAxMDA3NzA3OH0.6BHSqoC3DM7BXM7_X4Syq5W3u_U5MKO7EPClIkefExs",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -16,70 +26,28 @@ import Artist from "../components/Artist.astro"
 		<title>artists</title>
 	</head>
     <body>
+
 <MainLayout>
 	<h1>ARTISTS</h1>
-	<section>
-  <article class="artists">
-    <div class="imgfolder">
-    <img src="../../public/mikkel_galleri/mikkel.webp" alt="placeholder">
-    </div>
-    <h2>Mikkel Westrup</h2>
-    <p class="SHOMO">Show more</p>
-  </article>
-
-    <article class="artists">
-    <div class="imgfolder">
-    <img src="../../public/anthon_galleri/anthon.webp" alt="placeholder">
-    </div>
-    <h2>Mikkel Westrup</h2>
-    <p class="SHOMO">Show more</p>
-  </article>
-
-    <article class="artists">
-    <div class="imgfolder">
-    <img src="../../public/jakob_galleri/jakob.webp" alt="placeholder">
-    </div>
-    <h2>Mikkel Westrup</h2>
-    <p class="SHOMO">Show more</p>
-  </article>
-
-    <article class="artists">
-    <div class="imgfolder">
-    <img src="../../public/mathilde_galleri/mathilde.webp" alt="placeholder">
-    </div>
-    <h2>Mikkel Westrup</h2>
-    <p class="SHOMO">Show more</p>
-  </article>
+  <section class="artists">
+    {
+      data.map((artist) => {
+        return <Artist data={artist} />;
+      })
+    }
   </section>
     </MainLayout>
+
+
 	</body>
 </html>
 <style>
 @import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
-
-img {
-	filter: grayscale();
-}
-
-.SHOMO {
-	color: #ECC470;
-	text-decoration: underline;
-}
-
-  @media screen and (min-width: 620px) {
-img {
-	filter: grayscale();
-	transition: filter 0.5s ease;
-}
-img:hover {
-	filter: none;
-}
-
+@media screen and (min-width: 620px) {
   section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem;
 }
-
-  }
+}
 </style>

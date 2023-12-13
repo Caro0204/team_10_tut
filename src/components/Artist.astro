@@ -2,16 +2,35 @@
 const {data} =Astro.props;
 console.log(data);
 ---
-<a href={`/name/${data.speaker}`}>
+<a href={`/name/${data.artist}`}>
 <article>
     <div class="imgfolder">
-    <img src={data.image} alt="placeholder">
+    <img src={data.profile_img} alt="placeholder">
     </div>
     <h2>{data.name}</h2>
-    <p>{data.title}</p>
+    <p>Show more</p>
 </article>
 </a>
 
 <style>
+@import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
 
+img {
+	filter: grayscale();
+}
+
+.SHOMO {
+	color: #ECC470;
+	text-decoration: underline;
+}
+
+  @media screen and (min-width: 620px) {
+img {
+	filter: grayscale();
+	transition: filter 0.5s ease;
+}
+img:hover {
+	filter: none;
+}
+  }
 </style>
