@@ -20,10 +20,12 @@ import "../css/generel.css";
   </head>
   <body>
     <MainLayout>
-		  <div class="grid1_1">
+		  <div class="grid1">
+			<div>
       <h1>THANK YOU <br> TATTOO</h1>
-	  <div class="svg">
-	  <img src="/logo_tut.svg" alt="logo">
+	  </div>
+	  <div class="svg zoom_in">
+	  <img src="/drage.svg" alt="logo">
 	  </div>
 	  </div>
       <div class="grid1_1">
@@ -89,7 +91,32 @@ margin-left: 7px;
   }
   /*** SVG ***/
   
- 
+ .svg{
+	opacity: 65%;
+	width:60%;
+	padding-bottom: 150px;
+	rotate: -7deg;
+ }
+  .zoom_in {
+  animation-name: zoom_in_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes zoom_in_kf {
+  from {
+    scale: 0.1;
+  }
+  to {
+    scale: 1;
+  }
+}
+ .grid1{
+	display: flex;
+	justify-content: space-between;
+	
+ }
   @media screen and (min-width: 620px) {
     .grid1_1 {
       display: grid;
