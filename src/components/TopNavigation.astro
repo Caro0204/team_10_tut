@@ -17,7 +17,6 @@ import Button from "../components/ButtonNav.astro";
       </li>
       <li>
         <Button
-          class="border"
           id="booknow"
           ButtonTitle="BOOK NOW"
           ButtonLink="/booknow/"
@@ -183,7 +182,7 @@ import Button from "../components/ButtonNav.astro";
   // får fat i linksne ved deres ID
   var page1Link = document.getElementById("artists");
   var page2Link = document.getElementById("contact");
-  var page3Link = document.getElementById("booknow");
+  var page3Link = document.getElementById("Button");
 
   // Tjekker om den linksne matcher og tilføjer class
   if (currentPath === "/artists/") {
