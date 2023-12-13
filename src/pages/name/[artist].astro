@@ -1,0 +1,87 @@
+---
+import MainLayout from "../../components//MainLayout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+  "https://pexwboaieovroxjkczsc.supabase.co/rest/v1/tutdata",
+  {
+    method: "GET",
+    headers: {
+        apikey:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBleHdib2FpZW92cm94amtjenNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ1MDEwNzgsImV4cCI6MjAxMDA3NzA3OH0.6BHSqoC3DM7BXM7_X4Syq5W3u_U5MKO7EPClIkefExs"
+    },
+}
+  ).then(response => response.json());
+
+  return data.map((name) => {
+    return {
+      params: { artist: name.artist },
+      props: { myData:name },
+    };
+  });
+}
+
+const { myData } = Astro.props
+console.log(myData);
+---
+
+<MainLayout>
+    <section>
+        <article class="txt_grid">
+<button onclick="history.back()">Go Back</button>
+                <h2>{myData.name}</h2>
+	    <img src={myData.profile_img} alt="placeholder">
+        <div class="text">
+    <p>{myData.text}</p>
+    <h2>ART STYLE</h2>
+    <h4>{myData.style}</h4>
+    <a href={myData.insta}>@{myData.artist}</a>
+        </div>
+        </article>
+
+                    <h2>GALLERY</h2>
+        <article class="img_grid">
+    <img src={myData.portfolio1} alt="placeholder">
+    <img src={myData.portfolio2} alt="placeholder">
+    <img src={myData.portfolio3} alt="placeholder">
+    <img src={myData.portfolio4} alt="placeholder">
+    <img src={myData.portfolio5} alt="placeholder">
+    <img src={myData.portfolio6} alt="placeholder">
+    <img src={myData.portfolio7} alt="placeholder">
+    <img src={myData.portfolio8} alt="placeholder">
+    <img src={myData.portfolio9} alt="placeholder">
+    </article>
+
+    </section>
+</MainLayout>
+
+<style>
+    @import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
+
+img {
+    filter: grayscale();
+}
+
+      @media screen and (min-width: 620px) {
+        .txt_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .img_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        img {
+	filter: grayscale();
+	transition: filter 0.5s ease;
+}
+img:hover {
+	filter: none;
+}
+      }
+</style>
