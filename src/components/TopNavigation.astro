@@ -1,87 +1,95 @@
 ---
 import "../css/generel.css";
 import Button from "../components/ButtonNav.astro";
-
 ---
+
 <header>
-<div class="logo">
-  <a href="/"><img src="/logo_tut_t.svg" alt="logo" /></a>
+  <div class="logo">
+    <a href="/"><img src="/logo_tut_t.svg" alt="logo" /></a>
   </div>
-<nav>
-  <ul class="menu">
-    <li><a class="strikethrough" id="artists" href="/artists/">ARTISTS</a></li>
-    <li><a class="strikethrough" id="contact" href="/contact/">CONTACT</a></li>
-    <li><Button class="border" id="booknow" ButtonTitle="BOOK NOW" ButtonLink="/booknow/"/></li>
-   
-  </ul>
-   <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-</nav>
+  <nav>
+    <ul class="menu">
+      <li>
+        <a class="strikethrough" id="artists" href="/artists/">ARTISTS</a>
+      </li>
+      <li>
+        <a class="strikethrough" id="contact" href="/contact/">CONTACT</a>
+      </li>
+      <li>
+        <Button
+          class="border"
+          id="booknow"
+          ButtonTitle="BOOK NOW"
+          ButtonLink="/booknow/"
+        />
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
 </header>
 <style>
-/* Font */
-header {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.active {
-  text-decoration: line-through;
-color: #ecc470;
-}
-.strikethrough:hover {
-  text-decoration: line-through;
-  color: #ecc470;
-}
-/* logo */
-.logo{
+  /* Font */
+  header {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .active {
+    text-decoration: line-through;
+    color: #ecc470;
+  }
+  .strikethrough:hover {
+    text-decoration: line-through;
+    color: #ecc470;
+  }
+  /* logo */
+  .logo {
     width: 30%;
     margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+  }
 
-/* Knap */
-.booknow{
-background-color: #ffff;
-color: #101010;
-padding: 7px;
-padding-left: 9px;
-padding-right: 9px;
-font-size: 22px;
+  /* Knap */
+  .booknow {
+    background-color: #ffff;
+    color: #101010;
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 22px;
+  }
+  .fill {
+    background-color: #ecc470;
+  }
 
-}
-.fill{
-   background-color: #ecc470;
-}
+  /* burger menu */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  .burger {
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+  }
 
-/* burger menu */
-header {
-  display: flex;
-  justify-content: space-between;
-}
-nav {
-  display: flex;
-  align-items: center;
-  
-}
-.burger {
-  width: 36px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger .line {
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  margin-bottom: 5px;
-}
-.burger {
-  display: none;
-}
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  .burger {
+    display: none;
+  }
 
   nav {
     display: flex;
@@ -98,7 +106,6 @@ nav {
     margin-right: 30px;
   }
 
-
   /* Media query for responsiveness */
   @media screen and (max-width: 680px) {
     nav {
@@ -107,87 +114,83 @@ nav {
     }
 
     .logo {
-    width: 70%;
-      
-}
+      width: 70%;
+    }
     ul {
       flex-direction: column;
       gap: 0.5rem; /* Adjust the gap between menu items in mobile view */
     }
 
-  /* menu */
-  .menu {
-    display: none;
-  }
+    /* menu */
+    .menu {
+      display: none;
+    }
 
-  .burger {
-    display: block;
-  }
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
+    .burger {
+      display: block;
+    }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
 
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-  }
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+    }
 
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
 
-  nav.active .menu {
-    display: block;
-    background-color: #2d2d2dcf;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-  }
+    nav.active .menu {
+      display: block;
+      background-color: #2d2d2dcf;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+    }
 
-  nav.active .menu li {
-    margin: 15px 10px;
-    
-  }
+    nav.active .menu li {
+      margin: 15px 10px;
+    }
 
-  nav.active .menu a {
-    font-size: 20px;
-    color: white;
-   
+    nav.active .menu a {
+      font-size: 20px;
+      color: white;
+    }
   }
-}
 </style>
 <script>
-    const burger = document.querySelector(".burger");
-const nav = document.querySelector("nav");
-const menu = document.querySelector(".menu");
-const links = document.querySelectorAll(".menu li a");
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  nav.classList.toggle("active");
-});
-
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    burger.classList.remove("active");
-    nav.classList.remove("active");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
   });
-});
 
-var currentPath = window.location.pathname;
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
 
-// Get the links by their IDs
-var page1Link = document.getElementById('artists');
-var page2Link = document.getElementById('contact');
-var page3Link = document.getElementById('booknow');
+  var currentPath = window.location.pathname;
 
-// Check if the current path matches the link's href and add the class
-if (currentPath === '/artists/') {
-  page1Link.classList.add('active');
-} else if (currentPath === '/contact/') {
-  page2Link.classList.add('active');
-}else if (currentPath === '/booknow/') {
-  page3Link.classList.add('fill');
-}
+  // får fat i linksne ved deres ID
+  var page1Link = document.getElementById("artists");
+  var page2Link = document.getElementById("contact");
+  var page3Link = document.getElementById("booknow");
 
+  // Tjekker om den linksne matcher og tilføjer class
+  if (currentPath === "/artists/") {
+    page1Link.classList.add("active");
+  } else if (currentPath === "/contact/") {
+    page2Link.classList.add("active");
+  } else if (currentPath === "/booknow/") {
+    page3Link.classList.add("fill");
+  }
 </script>

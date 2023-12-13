@@ -4,64 +4,26 @@ import Button from "../components/ButtonNav.astro";
 ---
 
 <footer>
-    <div class="footer-columns">
-        <div class="footer-column">
-            <h3 class="overskrift">FAQ</h3>
-            <div class="faq">
-                <div class="faq-item">
-                    <div class="q_arrow">
-                    <h4 class="question">What payment methods do we offer?</h4>
-                    <img class="arrow" src="/arrow.svg" alt="pil ned">
-</div>
-                    <p class="answer">We offer: VISA - Mastercard - MobilePay - Cash </p>
-                </div>
-                <div class="faq-item">
-                    <div class="q_arrow">
-                    <h4 class="question">How do I book an appointment?</h4>
-                     <img class="arrow" src="/arrow.svg" alt="pil ned">
-            </div>
-                    <p class="answer">You can book an appointment by visiting the store, by insta, by the site or by calling the number: <br><br> + 45 60 18 16 63</p>
-                </div>
-                 <div class="faq-item">
-                    <div class="q_arrow">
-                    <h4 class="question">How much does a tattoo cost?</h4>
-                     <img class="arrow" src="/arrow.svg" alt="pil ned">
-                    </div>
-                    <p class="answer">The price depends on the size. We have a starting fee of DKK 800. Contact us for more information.</p>
-                </div>
-                 <div class="faq-item">
-                    <div class="q_arrow">
-                    <h4 class="question">Terms regarding advance payment & cancellation</h4>
-                     <img class="arrow" src="/arrow.svg" alt="pil ned">
-                     </div>
-                    <p class="answer">We charge a desosit of 25% of the booking value. The pre-paid deposit is not refounded in the event of cancellation if it happens 5 days before the appointment.</p>
-                </div>
-                 <div class="faq-item">
-                    <div class="q_arrow">
-                    <h4 class="question">Preparation for tattoo session</h4>
-                     <img class="arrow" src="/arrow.svg" alt="pil ned">
-                     </div>
-                    <p class="answer">We encourage you to avoird alcohol the days before and after your session for the best healing process. In addition, get a good meal before you show up.</p>
-                </div>
-                 <div class="faq-item linebottom">
-                    <div class="q_arrow">
-                    <h4 class="question">How do I take care of my new tattoo?</h4>
-                     <img class="arrow" src="/arrow.svg" alt="pil ned">
-                     </div>
-                    <p class="answer">You will receive an introduktion to how to treat your new tattoo after your session. <br><br> In case you have any questions, you can read more here: <a class="link_aftercare" href="https://mst.dk/borger/sundhed-og-kemi/personlig-pleje/think-before-you-ink/efter-tatovering" target="_blank">After care</a> </p>
-                </div>
-            </div>
+  <div class="footer-columns">
+    <div class="footer-column">
+      <h3 class="overskrift">FAQ</h3>
+      <div class="faq">
+        <div class="faq-item">
+          <div class="q_arrow">
+            <h4 class="question">What payment methods do we offer?</h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">We offer: VISA - Mastercard - MobilePay - Cash</p>
         </div>
-        <div class="footer-column">
-            <div class="logo_bottom">
-             <a href="/"><img src="/logo_tut.svg" alt="logo" /></a>
-             </div>
-             <div>
-            <h3 class="center font" >THANK YOU TATTOO</h3>
-            </div>
-            <div class="center">
-                <Button class="booknow border" id="booknow" ButtonTitle="BOOK NOW" ButtonLink="/booknow/" />
-            </div>
+        <div class="faq-item">
+          <div class="q_arrow">
+            <h4 class="question">How do I book an appointment?</h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">
+            You can book an appointment by visiting the store, by insta, by the
+            site or by calling the number: <br /><br /> + 45 60 18 16 63
+          </p>
         </div>
         <div class="footer-column">
             <ul>
@@ -80,161 +42,253 @@ import Button from "../components/ButtonNav.astro";
  <br><br>
   <li>Monday - friday: 12.00 - 18.00 <br>Saturday: 12.00 - 16.00 <br>Sunday: closed</li>
             </ul>
+        <div class="faq-item">
+          <div class="q_arrow">
+            <h4 class="question">How much does a tattoo cost?</h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">
+            The price depends on the size. We have a starting fee of DKK 800.
+            Contact us for more information.
+          </p>
         </div>
+        <div class="faq-item">
+          <div class="q_arrow">
+            <h4 class="question">
+              Terms regarding advance payment & cancellation
+            </h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">
+            We charge a desosit of 25% of the booking value. The pre-paid
+            deposit is not refounded in the event of cancellation if it happens
+            5 days before the appointment.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="q_arrow">
+            <h4 class="question">Preparation for tattoo session</h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">
+            We encourage you to avoird alcohol the days before and after your
+            session for the best healing process. In addition, get a good meal
+            before you show up.
+          </p>
+        </div>
+        <div class="faq-item linebottom">
+          <div class="q_arrow">
+            <h4 class="question">How do I take care of my new tattoo?</h4>
+            <img class="arrow" src="/arrow.svg" alt="pil ned" />
+          </div>
+          <p class="answer">
+            You will receive an introduktion to how to treat your new tattoo
+            after your session. <br /><br /> In case you have any questions, you
+            can read more here: <a
+              class="link_aftercare"
+              href="https://mst.dk/borger/sundhed-og-kemi/personlig-pleje/think-before-you-ink/efter-tatovering"
+              target="_blank">After care</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
+    <div class="footer-column">
+      <div class="logo_bottom">
+        <a href="/"><img src="/logo_tut.svg" alt="logo" /></a>
+      </div>
+      <div>
+        <h3 class="center font">THANK YOU TATTOO</h3>
+      </div>
+      <div class="center">
+        <Button
+          class="booknow border"
+          id="booknow"
+          ButtonTitle="BOOK NOW"
+          ButtonLink="/booknow/"
+        />
+      </div>
+    </div>
+    <div class="footer-column">
+      <ul>
+        <li>+4560181663</li>
+        <br /><br />
+        <li class="grid1_3">
+          <div>
+            <a
+              href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D"
+              target="_blank"><img src="/instasvg.svg" alt="insta svg" /></a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/thankyoutattoo" target="_blank"
+              ><img src="/facebook.svg" alt="facebook icon" /></a>
+          </div>
+          <div class="str"><img src="/tiktoksvg.svg" alt="tiktok svg" /></div>
+        </li>
+        <br /><br />
+
+        <li>
+          Oehlenschlægersgade 41 <br />
+           1663 Copenhagen V
+        </li>
+        <br /><br />
+        <li>
+          Mandag - fredag: 12.00 - 18.00 <br />Lørdag: 12.00 - 16.00 <br
+          />Søndag: lukket
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>
 <style>
-footer {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-/* Style FAQ items */
-.faq-item {
+  footer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  /* Style FAQ items */
+  .faq-item {
     margin-bottom: 15px;
     cursor: pointer;
     border-top: 1px solid #ccc;
-}
-.linebottom{
+  }
+  .linebottom {
     border-bottom: 1px solid #ccc;
-}
+  }
 
-.answer {
+  .answer {
     display: none;
     margin-left: 10px;
-}
-/***** LOGO *****/
-.logo_bottom{
+  }
+  /***** LOGO *****/
+  .logo_bottom {
     width: 35%;
     margin: 0 auto;
-     opacity: 40%;
-}
+    opacity: 40%;
+  }
 
-.font{
+  .font {
     font-family: "SignPainter HouseScript";
     margin: 0;
     margin-bottom: 10px;
     color: #c5c5c57b;
-
-}
-.center{
+  }
+  .center {
     text-align: center;
     font-size: 2rem;
-}
-ul{
+  }
+  ul {
     list-style: none;
     margin-top: 82px;
-}
-li{
+  }
+  li {
     color: white;
     font-family: "Inconsolata", monospace;
     font-size: 1rem;
-}
-li a{
+  }
+  li a {
     color: #ffff;
     font-family: "Inconsolata", monospace;
     font-size: 1.5rem;
-}
-h4, .overskrift{
-     margin-left: 10px;
-     color: white;
-}
-.overskrift{
+  }
+  h4,
+  .overskrift {
+    margin-left: 10px;
+    color: white;
+  }
+  .overskrift {
     font-size: 1.7rem;
-}
-.footer-column{
+  }
+  .footer-column {
     margin: 10px;
-}
-.link_aftercare{
+  }
+  .link_aftercare {
     font-size: 1rem;
     text-decoration: underline;
-    color: #ECC470;
-}
-.q_arrow{
+    color: #ecc470;
+  }
+  .q_arrow {
     display: flex;
     justify-content: space-between;
     margin-right: 15px;
-}
-/** icons **/
-.grid1_3{
+  }
+  /** icons **/
+  .grid1_3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:10px;
+    gap: 10px;
     width: 30%;
     margin-top: -25px;
-}
-.str{
+  }
+  .str {
     width: 90%;
-}
+  }
 
-/* pil */
+  /* pil */
 
-.arrow {
+  .arrow {
     transition: transform 0.3s ease-in-out;
     width: 6%;
-}
-.open .arrow {
+  }
+  .open .arrow {
     transform: rotate(180deg);
-}
+  }
 
- @media screen and (min-width: 800px){
+  @media screen and (min-width: 800px) {
     .footer-columns {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    
-    
-}
-.footer-column {
-    flex: 1;
-    margin-right: 20px;
-    margin: 20px;
-    
-}
-.overskrift{
-   font-size: 2.6rem;
-    margin-left: 10px;
-    margin-bottom: 12px;
-}
-h4{
-    font-size: 1.2rem;
-    margin-left: 10px;
-}
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .footer-column {
+      flex: 1;
+      margin-right: 20px;
+      margin: 20px;
+    }
+    .overskrift {
+      font-size: 2.6rem;
+      margin-left: 10px;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+    li {
+      font-size: 1.5rem;
+    }
+    /** icons **/
+    .grid1_3 {
+      width: 40%;
+    }
+    .str {
+      width: 90%;
+    }
 
-li{
-    font-size: 1.5rem;
-}
-/** icons **/
-.grid1_3{
-    width: 40%;
-}
-.str{
-    width: 90%;
-}
-
-/**** LOGO ****/
-.logo_bottom{
-    width: 45%;
-}
-}
+    /**** LOGO ****/
+    .logo_bottom {
+      width: 45%;
+    }
+  }
 </style>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    faqItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            const answer = this.querySelector('.answer');
-            item.classList.toggle("open");
-            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    faqItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        const answer = this.querySelector(".answer");
+        item.classList.toggle("open");
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
 
-            // Hide other answers when one is clicked
-            faqItems.forEach(function(otherItem) {
-                if (otherItem !== item) {
-                    otherItem.classList.remove("open");
-                    otherItem.querySelector('.answer').style.display = 'none';
-                }
-            });
+        // Hide other answers when one is clicked
+        faqItems.forEach(function (otherItem) {
+          if (otherItem !== item) {
+            otherItem.classList.remove("open");
+            otherItem.querySelector(".answer").style.display = "none";
+          }
         });
+      });
     });
-});
+  });
 </script>
