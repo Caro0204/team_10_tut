@@ -33,3 +33,16 @@ const { ButtonLink, ButtonTitle } = Astro.props;
     }
   }
 </style>
+
+<script>
+  var currentPath = window.location.pathname;
+
+  // får fat i linksne ved deres ID
+  var page1Link = document.getElementById("artists");
+  var page2Link = document.getElementById("contact");
+  var page3Link = document.getElementById("Button");
+
+    if (currentPath === "/booknow/") {
+    page3Link.classList.add("fill");
+  }
+</script>

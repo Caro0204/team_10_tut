@@ -38,7 +38,7 @@ console.log(myData);
     <p>{myData.text}</p>
     <h2>ART STYLE</h2>
     <h4>{myData.style}</h4>
-    <a href={myData.insta}>@{myData.artist}</a>
+    <a href={myData.insta} target="_blank">@{myData.handle}</a>
         </div>
         </article>
 
@@ -90,6 +90,10 @@ button {
   display: flex;
   align-self: flex-start;
   height: 30px;
+}
+
+.text a {
+  color: #ecc470;
 }
 
       @media screen and (min-width: 620px) {
