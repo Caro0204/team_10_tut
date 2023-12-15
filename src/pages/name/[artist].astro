@@ -62,10 +62,26 @@ console.log(myData);
     @import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
 
 img {
-    filter: grayscale();
-      width: 100%;
+  filter: grayscale();
+  width: 100%;
   height: auto;
   max-width: 100%;
+}
+
+.img_grid {
+  display: grid;
+  gap: 30px;
+}
+
+.img_grid img {
+  filter: none;
+  width: 90%;
+  height: auto;
+  max-width: 100%;
+}
+
+.img_grid img:nth-child(odd) {
+  margin-left: auto;
 }
 
 button {
@@ -107,9 +123,15 @@ button {
         .img_grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-row: 1fr 1fr 1fr;
             gap: 20px;
         }
+
+        .img_grid img {
+  filter: grayscale();
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
         img {
 	filter: grayscale();
 	transition: filter 0.5s ease;
@@ -120,5 +142,11 @@ button {
 img:hover {
 	filter: none;
 }
+
+.img_grid img:hover {
+  filter: none;
+}
+
+
       }
 </style>
