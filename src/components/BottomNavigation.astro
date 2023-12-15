@@ -124,6 +124,10 @@ import Button from "../components/ButtonNav.astro";
   </div>
 </footer>
 <style>
+      .footer-columns {
+      display: grid;
+      gap: 20px;
+    }
   footer {
     max-width: 1400px;
     margin: 0 auto;
@@ -161,7 +165,7 @@ import Button from "../components/ButtonNav.astro";
   }
   ul {
     list-style: none;
-    margin-top: 82px;
+    padding: 0;
   }
   li {
     color: white;
@@ -175,7 +179,6 @@ import Button from "../components/ButtonNav.astro";
   }
   h4,
   .overskrift {
-    margin-left: 10px;
     color: white;
   }
   .overskrift {
@@ -200,7 +203,6 @@ import Button from "../components/ButtonNav.astro";
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     width: 30%;
-    margin-top: -25px;
   }
   .str {
     width: 90%;
@@ -218,9 +220,9 @@ import Button from "../components/ButtonNav.astro";
 
   @media screen and (min-width: 800px) {
     .footer-columns {
-      display: flex;
-      justify-content: space-between;
-      margin: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
     }
     .footer-column {
       flex: 1;
@@ -229,7 +231,7 @@ import Button from "../components/ButtonNav.astro";
     }
     .overskrift {
       font-size: 2.6rem;
-      margin-left: 10px;
+      margin-top: 0;
       margin-bottom: 12px;
     }
     h4 {
