@@ -4,6 +4,18 @@ import MainLayout from "../components//MainLayout.astro";
 import BottomNavigation from "../components/BottomNavigation.astro";
 import ButtonIndex from "../components/ButtonIndex.astro";
 import "../css/generel.css";
+import Artist from "../components/Artist.astro"
+
+const data = await fetch(
+  "https://pexwboaieovroxjkczsc.supabase.co/rest/v1/tutdata",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBleHdib2FpZW92cm94amtjenNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ1MDEwNzgsImV4cCI6MjAxMDA3NzA3OH0.6BHSqoC3DM7BXM7_X4Syq5W3u_U5MKO7EPClIkefExs",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -47,6 +59,14 @@ import "../css/generel.css";
         </div>
       </div>
       <h2>ARTISTS</h2>
+        <section class="artists">
+    {
+      data.map((artist) => {
+        return <Artist data={artist} />;
+      })
+    }
+    </div>
+  </section>
     </MainLayout>
   </body>
 </html>
@@ -144,6 +164,12 @@ margin-bottom: 100px;
 	width:60%;
 	padding-bottom: 150px;
 	rotate: -7deg;
+ }
+
+ .artists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
  }
   }
 </style>
