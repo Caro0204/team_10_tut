@@ -1,8 +1,8 @@
 ---
-const { ButtonLink, ButtonTitle } = Astro.props;
+const { ButtonLink, ButtonTitle, id } = Astro.props;
 ---
 
-<a class="booknow border" href={ButtonLink}><button>{ButtonTitle}</button></a>
+<a class="booknow border" href={ButtonLink}><button id={id}>{ButtonTitle}</button></a>
 
 <style>
   button {
@@ -19,6 +19,9 @@ const { ButtonLink, ButtonTitle } = Astro.props;
     margin-top: -10px;
   }
   .border:hover {
+    background-color: #ecc470;
+  }
+  .fill {
     background-color: #ecc470;
   }
   a:hover {
@@ -40,7 +43,7 @@ const { ButtonLink, ButtonTitle } = Astro.props;
   // får fat i linksne ved deres ID
   var page1Link = document.getElementById("artists");
   var page2Link = document.getElementById("contact");
-  var page3Link = document.getElementById("Button");
+  var page3Link = document.querySelector(".booknow");
 
     if (currentPath === "/booknow/") {
     page3Link.classList.add("fill");

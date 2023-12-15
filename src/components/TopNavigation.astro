@@ -1,6 +1,6 @@
 ---
 import "../css/generel.css";
-import Button from "../components/ButtonNav.astro";
+import ButtonNav from "../components/ButtonNav.astro";
 ---
 
 <header>
@@ -16,7 +16,7 @@ import Button from "../components/ButtonNav.astro";
         <a class="strikethrough" id="contact" href="/contact/">CONTACT</a>
       </li>
       <li>
-        <Button
+        <ButtonNav
           id="booknow"
           ButtonTitle="BOOK NOW"
           ButtonLink="/booknow/"
@@ -183,7 +183,7 @@ import Button from "../components/ButtonNav.astro";
   // får fat i linksne ved deres ID
   var page1Link = document.getElementById("artists");
   var page2Link = document.getElementById("contact");
-  var page3Link = document.getElementById("Button");
+  var page3Link = document.getElementById("booknow");
 
   // Tjekker om den linksne matcher og tilføjer class
   if (currentPath === "/artists/") {
