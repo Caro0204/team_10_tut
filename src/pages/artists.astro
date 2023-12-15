@@ -35,6 +35,9 @@ const data = await fetch(
         return <Artist data={artist} />;
       })
     }
+        <div class="bigimg">
+      <img src="../../public/tatto_show.webp" alt="show">
+    </div>
   </section>
     </MainLayout>
 
@@ -43,11 +46,27 @@ const data = await fetch(
 </html>
 <style>
 @import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
+
+.bigimg {
+  width: 70%;
+  margin-left: auto;
+  margin-top: 100px;
+  grid-column: 3;
+  grid-row: 2;
+}
 @media screen and (min-width: 620px) {
   section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
     gap: 2.5rem;
+}
+
+.bigimg {
+  width: 100%;
+  margin-top: 200px;
+  grid-column: 3;
+  grid-row: 2;
 }
 }
 </style>
