@@ -20,7 +20,7 @@ import "../css/generel.css";
         <h1>CONTACT</h1>
         <img src="/udenfor.webp" alt="billede af butikken udefra">
         <div class="box">
-        <h1>FIND US</h1>
+        <h1 class="underoverskrift">FIND US</h1>
         <div class="grid1_1">
         <div>
             <div>
@@ -65,19 +65,12 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:10px;
-    width: 45%;
+    width: 35%;
     margin-top: -25px;
 }
 
 /****/
-.box{
-    margin: 70px;
-}
-.grid1_1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-}
+
 
 ul{
     list-style: none;
@@ -86,12 +79,12 @@ ul{
 li{
     color: white;
     font-family: "Inconsolata", monospace;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 }
 li a{
     color: #ffff;
     font-family: "Inconsolata", monospace;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .farve{
     color: #ECC470;
@@ -99,4 +92,32 @@ li a{
 .str{
     width: 90%;
 }
+.underoverskrift{
+    font-size: 3rem;
+    margin: 0;
+    margin-left: 7px;
+    margin-top: 15px;
+}
+  @media screen and (min-width: 620px){
+.grid1_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.grid1_3{
+     width: 45%;
+}
+.box{
+    margin: 70px;
+}
+li{
+    font-size: 1.7rem;
+}
+li a{
+    font-size: 1.5rem;
+}
+.str{
+    width: 90%;
+}
+  }
 </style>
