@@ -41,8 +41,8 @@ const { ButtonLink, ButtonTitle, id } = Astro.props;
   var currentPath = window.location.pathname;
 
   // får fat i linksne ved deres ID
-  var page1Link = document.getElementById("artists");
-  var page2Link = document.getElementById("contact");
+  var page1Link = document.querySelector("artists");
+  var page2Link = document.querySelector("contact");
   var page3Link = document.querySelector(".booknow");
 
     if (currentPath === "/booknow/") {

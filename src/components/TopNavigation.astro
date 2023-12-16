@@ -182,9 +182,9 @@ import ButtonNav from "../components/ButtonNav.astro";
   var currentPath = window.location.pathname;
 
   // får fat i linksne ved deres ID
-  var page1Link = document.getElementById("artists");
-  var page2Link = document.getElementById("contact");
-  var page3Link = document.getElementById("booknow");
+  var page1Link = document.querySelector("#artists");
+  var page2Link = document.querySelector("#contact");
+  var page3Link = document.querySelector(".booknow");
 
   // Tjekker om den linksne matcher og tilføjer class
   if (currentPath === "/artists/") {
