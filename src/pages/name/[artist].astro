@@ -24,6 +24,14 @@ export async function getStaticPaths() {
 const { myData } = Astro.props
 console.log(myData);
 ---
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon_tyt.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Discover our skilled tattoo artists and their diverse styles. Find the perfect artist to bring your tattoo ideas to life.">
+		<title>{myData.name} - THANK YOU TATTOO</title>
+	</head>
 
 <MainLayout>
     <section>
@@ -73,13 +81,6 @@ img {
   gap: 30px;
 }
 
-.img_grid img {
-  filter: none;
-  width: 90%;
-  height: auto;
-  max-width: 100%;
-}
-
 .img_grid img:nth-child(odd) {
   margin-left: auto;
 }
@@ -125,13 +126,6 @@ button {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
         }
-
-        .img_grid img {
-  filter: grayscale();
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
         img {
 	filter: grayscale();
 	transition: filter 0.5s ease;
