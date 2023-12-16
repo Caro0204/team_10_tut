@@ -116,6 +116,47 @@ const data = await fetch(
 	grid-template-columns: 1fr 1fr 1fr;
 	gap:10px;
 }
+/***** Billeder overlay *****/
+ .image_container {
+  width: auto; /* Justér bredden efter dit behov */
+  position: relative;
+  display: inline-block; /* For at sikre, at containeren holder størrelsen af billedet */
+}
+
+.image_container img {
+  width: 100%;
+  height:auto;
+  display: block;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ændr gennemsigtigheden efter ønske */
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.overlay .icon {
+  font-size: 50px; /* Ændr størrelsen på ikonet efter ønske */
+  color: white; /* Ændr farven på ikonet efter ønske */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image_container:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.image_container:hover .overlay .icon {
+  opacity: 1;
+}
 
   /*** Text ***/
   h1 {
@@ -124,6 +165,7 @@ const data = await fetch(
 	font-size: 3.5rem;
 	margin: 0;
 	margin-left: 7px;
+	margin-bottom: 20px;
   }
   h2{
 	margin-left: 7px;
@@ -148,9 +190,7 @@ margin-left: 7px;
   /*** SVG ***/
   
  .svg{
-	width:90%;
-	rotate: -7deg;
-  margin-left: auto;
+	display: none;
  }
  
  .fade_in {
@@ -202,6 +242,7 @@ margin-bottom: 100px;
 	width:60%;
 	padding-bottom: 150px;
 	rotate: -7deg;
+	display: inline;
  }
 
  .artists {
@@ -209,47 +250,6 @@ margin-bottom: 100px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
  }
- /***** Billeder overlay *****/
- .image_container {
-  width: 200px; /* Justér bredden efter dit behov */
-  position: relative;
-  display: inline-block; /* For at sikre, at containeren holder størrelsen af billedet */
-}
-
-.image_container img {
-  width: 100%;
-  height:auto;
-  display: block;
-}
-
-.overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Ændr gennemsigtigheden efter ønske */
-  opacity: 0;
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-}
-
-.overlay .icon {
-  font-size: 50px; /* Ændr størrelsen på ikonet efter ønske */
-  color: white; /* Ændr farven på ikonet efter ønske */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.image_container:hover .overlay {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0s linear 0s;
-}
-
-.image_container:hover .overlay .icon {
-  opacity: 1;
-}
-
+ 
   }
 </style>
