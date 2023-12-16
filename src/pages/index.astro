@@ -53,18 +53,18 @@ const data = await fetch(
 			<div class="image_container">
 			<img class="img" src="/tattoo_1.webp" width="100" height="100" alt="billede af en tattoo"></a>
 			<div class="overlay">
-				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img src="/instasvg.svg" alt="insta svg" /></a>
+				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
 			</div>
 			</div>
 			<div class="image_container">
 			<img class="img" src="/tattoo_2.webp" width="100" height="100" alt="billede af en tattoo"></a>
 			<div class="overlay">
-				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img src="/instasvg.svg" alt="insta svg" /></a>
+				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
 			</div>
 			</div>
 			<div class="image_container">
 			<img class="img" src="/tattoo_3.webp" width="100" height="100" alt="billede af en tattoo"></a>
-			<div class="overlay"><a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img src="/instasvg.svg" alt="insta svg" /></a></div>
+			<div class="overlay"><a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a></div>
 			</div>
 		  </div>
         </div>
@@ -208,5 +208,47 @@ margin-bottom: 100px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
  }
+ /***** Billeder overlay *****/
+ .image_container {
+  width: 200px; /* Justér bredden efter dit behov */
+  position: relative;
+  display: inline-block; /* For at sikre, at containeren holder størrelsen af billedet */
+}
+
+.image_container img {
+  width: 100%;
+  height:auto;
+  display: block;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ændr gennemsigtigheden efter ønske */
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.overlay .icon {
+  font-size: 50px; /* Ændr størrelsen på ikonet efter ønske */
+  color: white; /* Ændr farven på ikonet efter ønske */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image_container:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.image_container:hover .overlay .icon {
+  opacity: 1;
+}
+
   }
 </style>
