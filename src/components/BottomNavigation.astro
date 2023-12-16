@@ -5,7 +5,7 @@ import Button from "../components/ButtonNav.astro";
 
 <footer>
   <div class="footer-columns">
-     <div class="footer-column">
+     <div class="footer-FAQ">
       <h3 class="overskrift">FAQ</h3>
       <div class="faq">
         <div class="faq-item">
@@ -76,7 +76,7 @@ import Button from "../components/ButtonNav.astro";
           </p>
       </div>
     </div>
-    <div class="footer-column">
+    <div class="footer-LOGO">
       <div class="logo_bottom">
         <a href="/"><img src="/logo_tut_guld.svg" alt="logo" /></a>
       </div>
@@ -92,7 +92,7 @@ import Button from "../components/ButtonNav.astro";
         />
       </div>
     </div>
-    <div class="footer-column">
+    <div class="footer-CONT">
       <ul>
         <li>+4560181663</li>
         <br /><br />
@@ -127,7 +127,7 @@ import Button from "../components/ButtonNav.astro";
       .footer-columns {
       display: grid;
       gap: 20px;
-      margin-top: 50px;
+      margin-top: 150px;
     }
   footer {
     max-width: 1400px;
@@ -186,9 +186,6 @@ import Button from "../components/ButtonNav.astro";
   .overskrift {
     font-size: 1.7rem;
   }
-  .footer-column {
-    margin: 10px;
-  }
   .link_aftercare {
     font-size: 1rem;
     text-decoration: underline;
@@ -220,16 +217,24 @@ import Button from "../components/ButtonNav.astro";
     transform: rotate(180deg);
   }
 
+      .footer-LOGO {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .footer-CONT {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
   @media screen and (min-width: 800px) {
     .footer-columns {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
-    }
-    .footer-column {
-      flex: 1;
-      margin-right: 20px;
-      margin: 20px;
     }
     .overskrift {
       font-size: 2.6rem;
@@ -255,6 +260,19 @@ import Button from "../components/ButtonNav.astro";
     .logo_bottom {
       width: 45%;
     }
+
+    .footer-LOGO {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .footer-CONT {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
   }
 </style>
 <script>
