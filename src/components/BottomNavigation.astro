@@ -91,10 +91,8 @@ import Button from "../components/ButtonNav.astro";
       </div>
     </div>
     <div class="footer-CONT">
-      <ul>
-        <li>+4560181663</li>
-        <br /><br />
-        <li class="grid1_3">
+        <p>+4560181663</p>
+        <div class="grid1_3">
           <div>
             <a
               href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D"
@@ -105,19 +103,11 @@ import Button from "../components/ButtonNav.astro";
               ><img src="/facebook.svg" alt="facebook icon" /></a>
           </div>
           <div class="str"><img src="/tiktoksvg.svg" alt="tiktok svg" /></div>
-        </li>
-        <br /><br />
-
-        <li>
-          Oehlenschlægersgade 41 <br />
-           1663 Copenhagen V
-        </li>
-        <br /><br />
-        <li>
-          Monday - friday: 12.00 - 18.00 <br />Saturday: 12.00 - 16.00 <br
-          />Sunday: closed
-        </li>
-      </ul>
+        </div>
+        <p>Oehlenschlægersgade 41 <br> 1663 Copenhagen V</p>
+    <p>Monday - friday: 12.00 - 18.00</p>
+    <p>Saturday: 12.00 - 16.00</p>
+    <p>Sunday: closed</p>
     </div>
   </div>
 </footer>
@@ -163,16 +153,13 @@ import Button from "../components/ButtonNav.astro";
     text-align: center;
     font-size: 2rem;
   }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  li {
+ 
+  .footer-CONT p {
     color: white;
     font-family: "Inconsolata", monospace;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  li a {
+  a {
     color: #ffff;
     font-family: "Inconsolata", monospace;
     font-size: 1.5rem;
@@ -225,7 +212,7 @@ import Button from "../components/ButtonNav.astro";
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: left;
     }
 
   @media screen and (min-width: 800px) {
