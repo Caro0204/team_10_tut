@@ -126,22 +126,22 @@ const data = await fetch(
   height: auto;
   display: block;
 }
-
 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Ændr gennemsigtigheden efter ønske */
   opacity: 0;
-  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .overlay .icon {
-  font-size: 60px; /* Ændr størrelsen på ikonet efter ønske */
-  color: white; /* Ændr farven på ikonet efter ønske */
+width: 350%;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
