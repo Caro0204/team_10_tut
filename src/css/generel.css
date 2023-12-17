@@ -4,30 +4,55 @@ main {
   margin: 0 auto;
 }
 body {
-  background-color: #101010;
+  background-color: var(--baggrund);
 }
 
 /******** FONTS *********/
 a {
-  font-family: "Inconsolata", monospace;
+  font-family: var(--subheader-font);
   text-decoration: none;
-  color: #ffff;
+  color: var(--hvid);
   font-size: 1.2rem;
-  transition: text-decoration 0.3s ease;
 }
 
-h2,
 h3,
 h4,
 p {
-  font-family: "Inconsolata", monospace;
-  color: #c5c5c5;
+  font-family: var(--subheader-font);
+  color: var(--sølv);
+}
+
+h3 {
+  margin-left: 7px;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h2 {
+  color: var(--hvid);
+  font-family: var(--subheader-font);
 }
 
 h1 {
   font-size: 4.5rem;
-  font-family: "Inconsolata", monospace;
-  color: #ffff;
+  font-family: var(--subheader-font);
+  color: var(--hvid);
+  margin: 0;
+  margin-left: 7px;
+  margin-bottom: 20px;
+  font-style: bold;
+}
+
+:root {
+  --guld: #ecc470;
+  --sølv: #c5c5c5;
+  --hvid: #ffff;
+  --sort: #000000;
+  --baggrund: #101010;
+  --header-font: "SignPainter HouseScript";
+  --subheader-font: "Inconsolata", monospace;
 }
 
 /********** IMG **********/

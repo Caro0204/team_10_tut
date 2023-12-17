@@ -133,7 +133,7 @@ const data = await fetch(
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,6 +144,11 @@ const data = await fetch(
 width: 350%;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+.icon{
+	display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image_container:hover .overlay {
@@ -157,23 +162,15 @@ width: 350%;
 }
 
   /*** Text ***/
-  h1 {
-    font-family: "SignPainter HouseScript";
-	color: #ffffff;
-	font-size: 3.5rem;
-	margin: 0;
-	margin-left: 7px;
-	margin-bottom: 20px;
+  h1{
+	font-family: var(--header-font);
   }
   h2{
-	margin-left: 7px;
 	margin-bottom: 30px;
 	margin-top: 50px;
   }
   h3{
-	padding: auto;
-	margin-left: 7px;
-	font-size: 1rem;
+	margin-top: 24px;
   }
   .text_1{
 	margin-left: 7px;
@@ -232,8 +229,6 @@ margin-bottom: 100px;
 	justify-content: space-between;
  }
  h3{
-	padding: auto;
-	margin-left: 7px;
 	font-size: 1.2rem;
   }
   /*** SVG ***/

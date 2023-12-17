@@ -98,35 +98,27 @@ import "../css/generel.css";
 </html>
 <style>
   @import url(https://db.onlinewebfonts.com/c/cfdf18a10f253f0aa9db6db978d328c0?family=SignPainter+HouseScript);
-  h1 {
-    font-family: "Inconsolata", monospace;
-    color: white;
-    text-align: center;
-    font-size: 4rem;
-    font-style: bold;
-  }
   h2 {
     font-size: 3rem;
-    color: white;
     text-align: center;
   }
   /* FORM */
   label {
-    font-family: "Inconsolata", monospace;
-    color: white;
+    font-family: var(--subheader-font);
+    color:var(--hvid);
   }
   input[type="text"],
   select,
   option,
   textarea {
-    font-family: "Inconsolata", monospace;
-    color: black;
+    font-family: var(--subheader-font);
+    color: var(--sort);
     width: 100%;
     border: none;
   }
   input[type="submit"] {
-    font-family: "Inconsolata", monospace;
-    color: black;
+    font-family: var(--subheader-font);
+    color: var(--sort);
   }
   form {
     text-align: left;
@@ -134,25 +126,24 @@ import "../css/generel.css";
   }
 
   .submitknap {
-    border: 1.5px solid#c5c5c5;
+    border: 1.5px solid var(--sølv);
     padding: 7px;
     padding-left: 9px;
     padding-right: 9px;
     font-size: 22px;
-    font-family: "Inconsolata", monospace;
+    font-family: var(--subheader-font);
   }
   .submitknap:hover {
-    border: 1.5px solid#ecc470;
-    background-color: #101010;
+    border: 1.5px solid var(--guld);
+    background-color: var(--baggrund);
   }
   input {
-    color: #c5c5c5;
-  }
-  a,
-  input:hover {
-    color: #ecc470;
+    color: var(--sort);
   }
 
+  input:hover {
+    color: var(--guld);
+  }
   /* BILLEDER */
   .reg_img,
   .insta_img {
