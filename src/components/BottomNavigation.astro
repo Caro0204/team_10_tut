@@ -125,10 +125,10 @@ import Button from "../components/ButtonNav.astro";
   .faq-item {
     margin-bottom: 15px;
     cursor: pointer;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--linje);
   }
   .linebottom {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--linje);
   }
 
   .answer {
@@ -143,10 +143,10 @@ import Button from "../components/ButtonNav.astro";
   }
 
   .font {
-    font-family: "SignPainter HouseScript";
+    font-family: var(--header-font);
     margin: 0;
     margin-bottom: 10px;
-    color: #ecc470;
+    color: var(--guld);
     opacity: 50%;
   }
   .center {
@@ -155,18 +155,18 @@ import Button from "../components/ButtonNav.astro";
   }
  
   .footer-CONT p {
-    color: white;
-    font-family: "Inconsolata", monospace;
+    color: var(--hvid);
+    font-family: var(--subheader-font);
     font-size: 1.2rem;
   }
   a {
-    color: #ffff;
-    font-family: "Inconsolata", monospace;
+    color: var(--hvid);
+    font-family: var(--subheader-font);
     font-size: 1.5rem;
   }
   h4,
   .overskrift {
-    color: white;
+    color: var(--hvid);
   }
   .overskrift {
     font-size: 1.7rem;
@@ -174,7 +174,7 @@ import Button from "../components/ButtonNav.astro";
   .link_aftercare {
     font-size: 1rem;
     text-decoration: underline;
-    color: #ecc470;
+    color: var(--guld);
   }
   .q_arrow {
     display: flex;
