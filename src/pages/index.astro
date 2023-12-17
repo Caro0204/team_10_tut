@@ -51,21 +51,16 @@ const data = await fetch(
 		  <h3>View our gallery of tattoos on our insta which is continuously updated.</h3>
 		  <div class="grid1_3">
 			<div class="image_container">
-			<img class="img" src="/tat_2.webp" alt="billede af en tattoo"></a>
-			<div class="overlay">
-				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
-			</div>
+			<img class="img" src="/tat_2.webp" alt="billede af en tattoo">
+				<a class="overlay" href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
 			</div>
 			<div class="image_container">
-			<img class="img" src="/tat_1.webp" alt="billede af en tattoo"></a>
-			<div class="overlay">
-				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
-			</div>
+			<img class="img" src="/tat_1.webp" alt="billede af en tattoo">
+				<a class="overlay" href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
 			</div>
 			<div class="image_container">
-			<img class="img" src="/tat_3.webp" alt="billede af en tattoo"></a>
-			<div class="overlay">
-				<a href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a></div>
+			<img class="img" src="/tat_3.webp" alt="billede af en tattoo">
+				<a class="overlay" href="https://www.instagram.com/thankyoutattoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="icon" src="/instasvg.svg" alt="insta svg" /></a>
 			</div>
 		  </div>
         </div>
@@ -142,16 +137,10 @@ const data = await fetch(
 }
 
 .overlay .icon {
-width: 350%;
+width: 22%;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.icon{
-	display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .image_container:hover .overlay {
   opacity: 1;
   visibility: visible;
@@ -160,6 +149,7 @@ width: 350%;
 
 .image_container:hover .overlay .icon {
   opacity: 1;
+  cursor: pointer;
 }
 
   /*** Text ***/
