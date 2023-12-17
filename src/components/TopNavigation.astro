@@ -79,6 +79,7 @@ import ButtonNav from "../components/ButtonNav.astro";
     width: 36px;
     height: 20px;
     cursor: pointer;
+    
   }
 
   .burger .line {
@@ -86,6 +87,7 @@ import ButtonNav from "../components/ButtonNav.astro";
     height: 2px;
     background-color: white;
     margin-bottom: 5px;
+     transition: all .4s ease;
   }
   .burger {
     display: none;
@@ -112,6 +114,7 @@ import ButtonNav from "../components/ButtonNav.astro";
     nav {
       flex-direction: column;
       align-items: flex-start;
+      
     }
 
     .logo {
@@ -119,7 +122,7 @@ import ButtonNav from "../components/ButtonNav.astro";
     }
     ul {
       flex-direction: column;
-      gap: 0.5rem; /* Adjust the gap between menu items in mobile view */
+      gap: 0.5rem;
     }
 
     /* menu */
@@ -129,17 +132,21 @@ import ButtonNav from "../components/ButtonNav.astro";
 
     .burger {
       display: block;
+      
     }
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
+       transition: all .4s ease;
     }
 
     .burger.active .line:nth-child(2) {
       opacity: 0;
+      
     }
 
     .burger.active .line:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
+      transition: all .4s ease;
     }
 
     nav.active .menu {
