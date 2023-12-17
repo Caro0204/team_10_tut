@@ -9,23 +9,23 @@ const { ButtonLink, ButtonTitle, id } = Astro.props;
     all: unset;
   }
   .booknow {
-    background-color: #ffff;
-    color: #101010;
+    background-color: var(--hvid);
+    color: var(--baggrund);
     padding: 7px;
     padding-left: 9px;
     padding-right: 9px;
     font-size: 20px;
-    font-family: "Inconsolata", monospace;
+    font-family: var(--subheader-font);
     margin-top: -10px;
   }
   .border:hover {
-    background-color: #ecc470;
+    background-color: var(--guld);
   }
   .fill {
-    background-color: #ecc470;
+    background-color:var(--guld);
   }
   a:hover {
-    color: #101010;
+    color: var(--baggrund);
   }
   @media screen and (min-width: 800px) {
     .booknow {
