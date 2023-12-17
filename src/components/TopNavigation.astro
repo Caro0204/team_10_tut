@@ -38,11 +38,11 @@ import ButtonNav from "../components/ButtonNav.astro";
   }
   .active {
     text-decoration: line-through;
-    color: #ecc470;
+    color: var(--guld);
   }
   .strikethrough:hover {
     text-decoration: line-through;
-    color: #ecc470;
+    color: var(--guld);
   }
   /* logo */
   .logo {
@@ -54,15 +54,15 @@ import ButtonNav from "../components/ButtonNav.astro";
 
   /* Knap */
   .booknow {
-    background-color: #ffff;
-    color: #101010;
+    background-color: var(--hvid);
+    color: var(--baggrund);
     padding: 7px;
     padding-left: 9px;
     padding-right: 9px;
     font-size: 22px;
   }
   .fill {
-    background-color: #ecc470;
+    background-color: var(--guld);
   }
 
   /* burger menu */
@@ -85,7 +85,7 @@ import ButtonNav from "../components/ButtonNav.astro";
   .burger .line {
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: var(--hvid);
     margin-bottom: 5px;
      transition: all .4s ease;
   }
@@ -164,7 +164,7 @@ import ButtonNav from "../components/ButtonNav.astro";
 
     nav.active .menu a {
       font-size: 20px;
-      color: white;
+      color: var(--hvid);
     }
   }
 </style>
