@@ -48,7 +48,7 @@ h2 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: var(--subheader-font);
   color: var(--hvid);
   margin: 0;
@@ -58,7 +58,7 @@ h1 {
 }
 @media screen and (min-width: 620px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 /********** IMG **********/
