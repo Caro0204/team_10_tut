@@ -53,20 +53,24 @@ console.log(myData);
 
                     <h2>GALLERY</h2>
         <article class="img_grid">
-    <img src={myData.portfolio1} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio2} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio3} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio4} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio5} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio6} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio7} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio8} alt="placeholder" onclick="openModal(this)">
-    <img src={myData.portfolio9} alt="placeholder" onclick="openModal(this)">
+    <img src={myData.portfolio1} alt="placeholder">
+    <img src={myData.portfolio2} alt="placeholder">
+    <img src={myData.portfolio3} alt="placeholder">
+    <img src={myData.portfolio4} alt="placeholder">
+    <img src={myData.portfolio5} alt="placeholder">
+    <img src={myData.portfolio6} alt="placeholder">
+    <img src={myData.portfolio7} alt="placeholder">
+    <img src={myData.portfolio8} alt="placeholder">
+    <img src={myData.portfolio9} alt="placeholder">
     </article>
 
-<div id="myModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImg">
+<div id="popup" class="popup">
+  <span class="close" id="closePopup">&times;</span>
+  <img class="popup-content" id="popupImg">
+  <div class="popup-nav">
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
 </div>
 
     </section>
@@ -127,10 +131,8 @@ button {
   color: #ecc470;
 }
 
-
-
-/* Style for modal */
-.modal {
+/* Styles for popup */
+.popup {
   display: none;
   position: fixed;
   z-index: 1;
@@ -142,11 +144,12 @@ button {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal-content {
+.popup-content {
   margin: auto;
   display: block;
   max-width: 80%;
   max-height: 80%;
+  filter: none;
 }
 
 .close {
@@ -165,7 +168,6 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 
       @media screen and (min-width: 620px) {
@@ -214,17 +216,38 @@ img:hover {
 
 <script>
 
-  function openModal(imgElement) {
-  const modal = document.getElementById('myModal');
-  const modalImg = document.getElementById('modalImg');
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.img_grid img');
+  const popup = document.getElementById('popup');
+  const closePopup = document.getElementById('closePopup');
+  const popupImg = document.getElementById('popupImg');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
 
-  modal.style.display = 'block';
-  modalImg.src = imgElement.src;
-}
+  let currentIndex = 0;
 
-function closeModal() {
-  const modal = document.getElementById('myModal');
-  modal.style.display = 'none';
-}
+  images.forEach(function(img, index) {
+    img.addEventListener('click', function() {
+      currentIndex = index;
+      popup.style.display = 'block';
+      popupImg.src = img.src;
+    });
+  });
+
+  closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+  });
+
+  prevBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    popupImg.src = images[currentIndex].src;
+  });
+
+  nextBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    popupImg.src = images[currentIndex].src;
+  });
+});
+
 
 </script>
